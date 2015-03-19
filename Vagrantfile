@@ -18,6 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	
 	config.vm.provision :chef_solo do |chef|
 		chef.json = {
+			'go' => {
+				'version' => '1.4.2'
+			}
 		}
 		chef.run_list = [
 			'recipe[apt]',

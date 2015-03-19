@@ -1,10 +1,5 @@
 
 define :prometheus_exporter_install, :run_args=> '', :exporter=> {} , :deploy_key => "" do
-
-	include_recipe 'build-essential'
-	include_recipe 'golang'
-	include_recipe 'runit'
-	include_recipe 'go-service'
 	
 	exporter = params[:exporter]
 	run_args = params[:run_args]
